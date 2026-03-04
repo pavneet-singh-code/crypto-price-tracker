@@ -5,18 +5,18 @@ const HeroSection = () => {
     <section className="relative min-h-screen w-full flex items-center justify-center bg-black overflow-hidden px-4 sm:px-6 lg:px-8">
 
       {/* Background Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-emerald-600/5 blur-[100px] rounded-full pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-125 h-125 bg-emerald-500/10 blur-[120px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-75 h-75 bg-emerald-600/5 blur-[100px] rounded-full pointer-events-none" />
 
       <div className="relative z-10 max-w-4xl w-full text-center flex flex-col items-center">
 
         {/* Accent Line */}
-        <div className="w-24 h-1 bg-gradient-to-r from-transparent via-emerald-500 to-transparent mb-10 opacity-50" />
+        <div className="w-24 h-1 bg-linear-to-r from-transparent via-emerald-500 to-transparent mb-10 opacity-50" />
 
         {/* Headline */}
         <h1 className="text-white text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight mb-6">
           Track Crypto Markets <br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-b from-emerald-300 to-emerald-600">
+          <span className="text-transparent bg-clip-text bg-linear-to-b from-emerald-300 to-emerald-600">
             In Real Time
           </span>
         </h1>
@@ -51,7 +51,7 @@ const HeroSection = () => {
         <span className="text-[10px] text-emerald-500/50 uppercase tracking-[0.3em] font-bold">
           Scroll
         </span>
-        <div className="w-px h-12 bg-gradient-to-b from-emerald-500 to-transparent" />
+        <div className="w-px h-12 bg-linear-to-b from-emerald-500 to-transparent" />
       </div>
     </section>
   );
