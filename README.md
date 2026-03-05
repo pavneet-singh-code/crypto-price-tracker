@@ -1,219 +1,58 @@
-# 📊 Crypto Price Tracker
+Crypto Price Tracker
 
-A modern **cryptocurrency tracking dashboard** built with **Next.js**
-that allows users to explore real‑time crypto market data, search coins,
-and view detailed price trends.
+A modern web application that allows users to explore and track cryptocurrency market data in real time. The application provides an interactive dashboard for viewing the latest prices, market statistics, and historical trends of popular digital assets.
 
-This project focuses on learning **API integration, async data handling,
-dynamic routing, and clean project structure** while building a
-practical web application.
+Overview
 
----
+Crypto Price Tracker fetches live market data from the CoinGecko API and presents it in a clean, responsive interface. Users can browse major cryptocurrencies, search for specific assets, and view detailed analytics for each coin.
 
-# 🚀 Features
+The project demonstrates API integration, dynamic routing, reusable component architecture, and data visualization within a modern React framework.
 
-### 🔎 Browse Cryptocurrencies
+Features
 
-- View top cryptocurrencies
-- See **current price**
-- Check **24h price change**
-- View **market capitalization**
+Live Cryptocurrency Data
+Displays up-to-date information for major cryptocurrencies including price, market cap, trading volume, and daily price changes.
 
-### 🔍 Search Functionality
+Search Functionality
+Quickly find cryptocurrencies by name using the search bar in the navigation.
 
-- Search coins by **name or symbol**
-- Instant filtering
-- Case‑insensitive matching
-- No page reload
+Dynamic Coin Pages
+Each cryptocurrency has its own detailed page that includes market statistics and historical data.
 
-### 📈 Coin Detail Page
+Interactive Price Chart
+Visual representation of price trends over time to help analyze market movement.
 
-Each coin has its own page displaying:
+Responsive Interface
+Designed to work smoothly across desktop and mobile devices.
 
-- Coin name and symbol
-- Current price
-- Market statistics
-- 7‑day historical price chart
+Modern UI Design
+Dark-themed dashboard with clear visual indicators for price increases and decreases.
 
-### ⚡ Loading & Error Handling
+Tech Stack
 
-- Loading indicators while fetching data
-- Graceful UI if API fails
-- Prevents crashes during network issues
+Next.js – React framework for server-side rendering and routing
 
----
+React – Component-based UI architecture
 
-# 🧠 Learning Goals
+Tailwind CSS – Utility-first styling framework
 
-This project is intentionally designed to practice:
+CoinGecko API – Cryptocurrency market data source
 
-- API consumption
-- Async/await data fetching
-- Error handling
-- Next.js App Router
-- Dynamic routing
-- Component‑based architecture
+Lucide Icons – Icon library used throughout the interface
 
----
+How It Works
 
-# 🛠 Tech Stack
+The application retrieves cryptocurrency market data from the CoinGecko API. The homepage displays a list of popular coins with their current prices and market statistics. Users can search for a specific cryptocurrency or click on a coin to view a detailed analytics page.
 
-**Framework** - Next.js (App Router)
+Each coin page dynamically loads additional information, including market metrics and historical price data used to render a chart.
 
-**Language** - JavaScript / TypeScript
+Purpose
 
-**Styling** - Tailwind CSS or CSS Modules
+This project was built to demonstrate practical frontend development skills including API integration, dynamic routing, reusable component design, and data-driven user interfaces.
 
-**API** - CoinGecko Public API
+License
 
-**Charts** - Recharts / Chart.js
-
-**Deployment** - Vercel
-
----
-
-# 📂 Project Structure
-
-    /app
-      page.tsx                → Home page listing cryptocurrencies
-      /coin/[id]/page.tsx     → Dynamic route for individual coin
-
-      loading.tsx             → Global loading UI
-      error.tsx               → Global error UI
-
-    /components
-      CoinCard.tsx            → Displays individual coin data
-      SearchBar.tsx           → Handles coin search
-      PriceChart.tsx          → Displays price history
-
-    /lib
-      api.ts                  → API fetching utilities
-
----
-
-# 🧭 Application Routes
-
-## `/`
-
-**Home Page**
-
-Displays a list of cryptocurrencies.
-
-Shows: - Coin name - Symbol - Current price - 24h change - Market cap
-
-Users can search coins and navigate to detailed views.
-
----
-
-## `/coin/[id]`
-
-**Coin Detail Page**
-
-Dynamic page displaying information for a specific coin.
-
-Shows: - Coin name - Current price - Market stats - Historical price
-chart
-
-Data is fetched using the coin ID from the URL.
-
----
-
-# ⚙️ API Integration
-
-This project uses the **CoinGecko API** to fetch cryptocurrency data.
-
-Top coins endpoint:
-
-    https://api.coingecko.com/api/v3/coins/markets
-
-Coin details endpoint:
-
-    https://api.coingecko.com/api/v3/coins/{id}
-
-Historical data endpoint:
-
-    https://api.coingecko.com/api/v3/coins/{id}/market_chart
-
-API logic should be centralized in `/lib/api.ts`.
-
----
-
-# ⏳ Loading and Error Handling
-
-Handled using Next.js features:
-
-- `loading.tsx` for loading UI
-- `error.tsx` for error boundaries
-- try/catch blocks for API requests
-
-This ensures a smooth user experience even when the API fails.
-
----
-
-# 🌱 Environment Variables
-
-Create a `.env.local` file:
-
-    NEXT_PUBLIC_API_BASE_URL=https://api.coingecko.com/api/v3
-
----
-
-# 📸 Screenshots
-
-Add screenshots after building the UI:
-
-- Home page
-- Search results
-- Coin detail page
-
----
-
-# 🔮 Future Improvements
-
-Potential improvements:
-
-- Dark mode
-- Favorite coins/watchlist
-- Pagination
-- Currency conversion
-- Sorting by market cap or price
-
----
-
-# 🧪 Running the Project Locally
-
-Install dependencies:
-
-    npm install
-
-Run development server:
-
-    npm run dev
-
-Open:
-
-    http://localhost:3000
-
----
-
-# 🌐 Deployment
-
-This project can be deployed easily using **Vercel**.
-
-Steps:
-
-1.  Push project to GitHub
-2.  Import repository into Vercel
-3.  Deploy
-
----
-
-# 👨‍💻 Author
-
-**Pavneet Singh**\
-Computer Science Student
-
-Building projects month‑by‑month to master **full‑stack development**.
+This project is open source and available for learning and demonstration purposes.
 
 ---
 
