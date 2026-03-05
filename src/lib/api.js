@@ -21,7 +21,7 @@ async function getTopCoins() {
 }
 
 async function getCoinDetails(id) {
-    const data = await fetchAPI(`/coins/${id}`);
+    const data = await fetchAPI(`/coins/${id}?sparkline=true`);
 
     return data;
 }
