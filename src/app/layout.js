@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
 
                 <main>{children}</main>
 
-                {/* Footer Placeholder */}
                 <footer className="text-center text-gray-500 py-10 border-t border-emerald-500/10">
                     Crypto Tracker © 2026
                 </footer>

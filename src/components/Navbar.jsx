@@ -3,8 +3,9 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import SearchBar from "./SearchBar";
 
-export default function Navbar() {
+export default function Navbar({ onSearch }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
@@ -15,18 +16,23 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black border-b border-emerald-500/20">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
 
         {/* Logo */}
         <Link
           href="/"
-          className="text-xl font-bold text-white tracking-tight"
+          className="text-xl font-bold text-white tracking-tight shrink-0"
         >
           Coin<span className="text-emerald-500">core</span>
         </Link>
 
+        {/* Desktop Search */}
+        <div className="hidden md:flex flex-1 max-w-sm">
+          <SearchBar onSearch={onSearch} />
+        </div>
+
         {/* Desktop Links */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-8 shrink-0">
           {navLinks.map((link) => (
             <Link
               key={link.name}
@@ -49,8 +55,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-black border-t border-emerald-500/20">
-          <div className="flex flex-col px-6 py-4 gap-4">
+        <div className="md:hidden bg-black border-t border-emerald-500/20 px-6 py-6 space-y-6">
+          
+          {/* Mobile Search */}
+          <SearchBar onSearch={onSearch} />
+
+          {/* Mobile Links */}
+          <div className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
