@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { TrendingUp, TrendingDown } from "lucide-react";
 
 const CoinCard = ({ coin }) => {
@@ -29,6 +30,7 @@ const CoinCard = ({ coin }) => {
     }).format(val ?? 0);
 
   return (
+    <Link href={`/coin/${coin.id}`}>
     <div
       className={`group relative bg-zinc-950 border p-8 rounded-3xl transition-all duration-500 flex flex-col gap-6 overflow-hidden ${
         isPositive
@@ -100,6 +102,7 @@ const CoinCard = ({ coin }) => {
         </div>
       </div>
     </div>
+    </Link>
   );
 };
 
